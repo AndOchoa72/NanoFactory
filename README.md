@@ -1,6 +1,8 @@
 Unity 2D Game Creation test
 
-PreEntrega del Proyecto: NanoFactory:
+PreEntrega del Proyecto: NanoFactory 240612:  
+https://github.com/AndOchoa72/NanoFactory
+Build disponible en /BuildWin/NanoFactory.zip
 
 1.: C# / Unity basico:  
 1.a:    ✅  Variables  
