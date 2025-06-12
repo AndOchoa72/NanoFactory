@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -33,21 +29,37 @@ public class PlayerMove : MonoBehaviour
     {
         isMoving = false;
 
-        PSpdX = Input.GetAxisRaw("Horizontal");
-        if (PSpdX > 0.5f)
+        PSpdX = 0f;
+
+        if (Input.GetKey(KeyCode.D))
         {
+            PSpdX = 1f;
             MIzq = false;
             isMoving = true;
         }
-        if (PSpdX < -0.5f)
+
+        if (Input.GetKey(KeyCode.A))
         {
+            PSpdX = -1f;
             MIzq = true;
             isMoving = true;
         }
         sr.flipX = MIzq;
 
-        PSpdY = Input.GetAxisRaw("Vertical");
+        PSpdY = 0f;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            PSpdY = 1f;
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            PSpdY = -1f;
+        }
+
         if (PSpdY != 0f) { isMoving = true; }
+
         PSpd = new Vector2(PSpdX, PSpdY);
         PSpd.Normalize();
         rb.velocity = PSpeed * PSpd;
