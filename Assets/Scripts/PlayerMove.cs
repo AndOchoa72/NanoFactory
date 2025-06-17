@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Animator animator;
     private float PSpdX, PSpdY = 0f;
     private bool MIzq = false;
-    private Vector2 PSpd;
+    private Vector3 PSpd;
     Rigidbody2D rb;
     SpriteRenderer sr;
 
@@ -60,9 +60,10 @@ public class PlayerMove : MonoBehaviour
 
         if (PSpdY != 0f) { isMoving = true; }
 
-        PSpd = new Vector2(PSpdX, PSpdY);
-        PSpd.Normalize();
-        rb.velocity = PSpeed * PSpd;
+        PSpd = new Vector3(PSpdX, PSpdY, 0f).normalized;
+        //    PSpd.Normalize();
+        //    rb.velocity = PSpeed * PSpd;
+        transform.position += PSpeed * Time.deltaTime * PSpd;
 
         if (oldMoving != isMoving)
         {
@@ -70,4 +71,19 @@ public class PlayerMove : MonoBehaviour
             oldMoving = isMoving;
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision Started! " + collision.collider.name);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log("Collision OnGoing! " + collision.collider.name);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("Collision Ended! " + collision.collider.name);
+    }
+
 }

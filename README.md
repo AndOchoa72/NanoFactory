@@ -1,6 +1,6 @@
 Unity 2D Game Creation test
 
-PreEntrega del Proyecto: NanoFactory 240612:  
+PreEntrega del Proyecto: NanoFactory 250616:  
 https://github.com/AndOchoa72/NanoFactory
 Build disponible en /BuildWin/NanoFactory.zip
 
@@ -9,7 +9,7 @@ Build disponible en /BuildWin/NanoFactory.zip
 1.b:    ✅  Condicionales  
 1.c:    ✅  Funciones  
 1.d:    ✅  Inputs  
-1.e:    ❌  Colisiones  
+1.e:    ✅  Colisiones  
 1.f:    ❌  Instantiate
 
 2.: Sprites Iniciales:  
