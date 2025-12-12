@@ -12,6 +12,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/BuildWin/
+/BuildLinux/
+NanoFactoryWin.zip
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
